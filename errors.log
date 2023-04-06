@@ -1,0 +1,298 @@
+2023-04-03 16:41:49,056 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 70, in load_dataset
+    data_train = np.load(self.file_name)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 416, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'examples/data/data_party0.npz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 78, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/data_party0.npz
+2023-04-03 16:43:39,238 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 70, in load_dataset
+    data_train = np.load(self.file_name)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 416, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'examples/data/data_party0.npz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 78, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/data_party0.npz
+2023-04-03 16:46:04,212 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 71, in load_dataset
+    x_train = data_train['x_train']
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 259, in __getitem__
+    raise KeyError("%s is not a file in the archive" % key)
+KeyError: 'x_train is not a file in the archive'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 78, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+2023-04-03 16:47:42,535 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 72, in load_dataset
+    x_train = data_train['x_train']
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 259, in __getitem__
+    raise KeyError("%s is not a file in the archive" % key)
+KeyError: 'x_train is not a file in the archive'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 79, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+2023-04-03 16:48:06,533 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 72, in load_dataset
+    x_train = data_train['x_train']
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 259, in __getitem__
+    raise KeyError("%s is not a file in the archive" % key)
+KeyError: 'x_train is not a file in the archive'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 79, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+2023-04-03 16:48:36,136 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 72, in load_dataset
+    x_train = data_train['x_train']
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/numpy/lib/npyio.py", line 259, in __getitem__
+    raise KeyError("%s is not a file in the archive" % key)
+KeyError: 'x_train is not a file in the archive'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 79, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+2023-04-03 16:48:56,632 | 1.1.0 | ERROR | __main__                                      | Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 71, in load_dataset
+    print(data_train.shape)
+AttributeError: 'NpzFile' object has no attribute 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 72, in __init__
+    self.data_handler = data_cls_ref(data_config=data_info)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 33, in __init__
+    (self.x_train, self.y_train), (self.x_test, self.y_test) = self.load_dataset()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/util/data_handlers/housing_mlp_keras_data_handler.py", line 79, in load_dataset
+    self.file_name)
+OSError: Unable to load training data from path provided in config file: examples/data/housing_mlp/random/data_party0.npz
+2023-04-03 17:22:49,610 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:38:17,002 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:44:58,152 | 1.1.0 | ERROR | __main__                                      | Error occurred during stop
+2023-04-03 17:44:58,152 | 1.1.0 | ERROR | __main__                                      | Insufficient number of parties to start training.
+2023-04-03 17:45:30,892 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:46:08,874 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:47:04,655 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:47:34,982 | 1.1.0 | ERROR | __main__                                      | Exception occurred while training.
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 208, in start_training
+    self.fusion.start_global_training()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/iter_avg_fusion_handler.py", line 111, in start_global_training
+    lst_replies = self.query_all_parties(payload)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 230, in query_all_parties
+    lst_parties = self.get_registered_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 136, in get_registered_parties
+    return self.ph.get_registered_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 564, in get_registered_parties
+    available_parties = self.get_available_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 579, in get_available_parties
+    'Insufficient number of parties to start training.')
+ibmfl.exceptions.GlobalTrainingException: Insufficient number of parties to start training.
+2023-04-03 17:47:34,986 | 1.1.0 | ERROR | __main__                                      | Insufficient number of parties to start training.
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 208, in start_training
+    self.fusion.start_global_training()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/iter_avg_fusion_handler.py", line 111, in start_global_training
+    lst_replies = self.query_all_parties(payload)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 230, in query_all_parties
+    lst_parties = self.get_registered_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 136, in get_registered_parties
+    return self.ph.get_registered_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 564, in get_registered_parties
+    available_parties = self.get_available_parties()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 579, in get_available_parties
+    'Insufficient number of parties to start training.')
+ibmfl.exceptions.GlobalTrainingException: Insufficient number of parties to start training.
+2023-04-03 17:47:34,986 | 1.1.0 | ERROR | __main__                                      | Error occurred during stop
+2023-04-03 17:47:34,986 | 1.1.0 | ERROR | __main__                                      | Insufficient number of parties to start training.
+2023-04-03 17:49:39,422 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:50:59,446 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:56:28,267 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:57:05,606 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:57:59,037 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:58:38,909 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 17:59:16,861 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,411 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,441 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,450 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,469 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,631 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,654 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,657 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,668 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,671 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:01:28,673 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,168 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,195 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,308 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,326 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,360 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,364 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,370 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,374 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,376 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 18:17:52,377 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-03 19:05:50,055 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:40:10,684 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:40:32,004 | 1.1.0 | ERROR | ibmfl.aggregator.protohandler.proto_handler   | Error occurred while sending MessageType.TRAIN request to parties'int' object is not callable
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 286, in query_parties_with_same_payload
+    self.send_different_message_concurrently(party_ids, messages)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 177, in send_different_message_concurrently
+    elapsed_eval_dispatch = (end_eval_dispatch - start_eval_dispatch).seconds()*1000
+TypeError: 'int' object is not callable
+2023-04-06 14:40:32,007 | 1.1.0 | ERROR | ibmfl.aggregator.protohandler.proto_handler   | Error occurred while sending MessageType.TRAIN request to parties
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 286, in query_parties_with_same_payload
+    self.send_different_message_concurrently(party_ids, messages)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 177, in send_different_message_concurrently
+    elapsed_eval_dispatch = (end_eval_dispatch - start_eval_dispatch).seconds()*1000
+TypeError: 'int' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 405, in query_parties
+    parties_to_query, payload, msg_type=msg_type)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 291, in query_parties_with_same_payload
+    'to parties'.format(str(msg_type)))
+ibmfl.exceptions.FLException: Error occurred while sending MessageType.TRAIN request to parties
+2023-04-06 14:40:32,009 | 1.1.0 | ERROR | __main__                                      | Exception occurred while training.
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 286, in query_parties_with_same_payload
+    self.send_different_message_concurrently(party_ids, messages)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 177, in send_different_message_concurrently
+    elapsed_eval_dispatch = (end_eval_dispatch - start_eval_dispatch).seconds()*1000
+TypeError: 'int' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 405, in query_parties
+    parties_to_query, payload, msg_type=msg_type)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 291, in query_parties_with_same_payload
+    'to parties'.format(str(msg_type)))
+ibmfl.exceptions.FLException: Error occurred while sending MessageType.TRAIN request to parties
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 208, in start_training
+    self.fusion.start_global_training()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/iter_avg_fusion_handler.py", line 114, in start_global_training
+    lst_replies = self.query_all_parties(payload)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 231, in query_all_parties
+    lst_model_updates = self.query_parties(payload, lst_parties)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 261, in query_parties
+    return_responding_parties=return_party_list
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 491, in query_parties
+    'Error occurred while sending requests to parties')
+ibmfl.exceptions.GlobalTrainingException: Error occurred while sending requests to parties
+2023-04-06 14:40:32,011 | 1.1.0 | ERROR | __main__                                      | Error occurred while sending requests to parties
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 286, in query_parties_with_same_payload
+    self.send_different_message_concurrently(party_ids, messages)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 177, in send_different_message_concurrently
+    elapsed_eval_dispatch = (end_eval_dispatch - start_eval_dispatch).seconds()*1000
+TypeError: 'int' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 405, in query_parties
+    parties_to_query, payload, msg_type=msg_type)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 291, in query_parties_with_same_payload
+    'to parties'.format(str(msg_type)))
+ibmfl.exceptions.FLException: Error occurred while sending MessageType.TRAIN request to parties
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/aggregator.py", line 208, in start_training
+    self.fusion.start_global_training()
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/iter_avg_fusion_handler.py", line 114, in start_global_training
+    lst_replies = self.query_all_parties(payload)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 231, in query_all_parties
+    lst_model_updates = self.query_parties(payload, lst_parties)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/fusion/fusion_handler.py", line 261, in query_parties
+    return_responding_parties=return_party_list
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 491, in query_parties
+    'Error occurred while sending requests to parties')
+ibmfl.exceptions.GlobalTrainingException: Error occurred while sending requests to parties
+2023-04-06 14:40:32,014 | 1.1.0 | ERROR | ibmfl.aggregator.protohandler.proto_handler   | Error occurred while sending STOP request to parties'int' object is not callable
+Traceback (most recent call last):
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 594, in stop_parties
+    self.send_different_message_concurrently(party_ids, messages)
+  File "/Users/armaghan/opt/anaconda3/envs/ibm_fl/lib/python3.6/site-packages/ibmfl/aggregator/protohandler/proto_handler.py", line 177, in send_different_message_concurrently
+    elapsed_eval_dispatch = (end_eval_dispatch - start_eval_dispatch).seconds()*1000
+TypeError: 'int' object is not callable
+2023-04-06 14:41:47,910 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:42:46,969 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:49:27,350 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:53:13,296 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,126 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,152 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,323 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,354 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,394 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,401 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,409 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,413 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,414 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
+2023-04-06 14:57:05,416 | 1.1.0 | ERROR | ibmfl.model.keras_fl_model                    | Loading model via keras.models.load_model failed!
