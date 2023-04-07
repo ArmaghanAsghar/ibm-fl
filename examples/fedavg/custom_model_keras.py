@@ -1,14 +1,51 @@
 import os
-import tensorflow as tf
 import keras
 from keras import backend as K
 from keras.layers import Conv2D, MaxPooling2D
-from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Dense
 from keras.models import Sequential
+from keras.optimizers import Adam
 
 import logging
 logger = logging.getLogger(__name__)
 
+
+
+
+class HousingMLP:
+    def __init__(self, params_per_layer=10, hidden_layers_num=1, learning_rate=0.0, data_type="float32"):
+        super(HousingMLP, self).__init__()
+        self.params_per_layer = params_per_layer
+        self.hidden_layers_num = hidden_layers_num
+        # We set the default value to 0.0 so not to train,
+        # since this model is solely used for stress testing.
+        self.learning_rate = learning_rate
+
+        # if data_type == "float32":
+        #     self.data_type = tf.float32
+        # elif data_type == "float64":
+        #     self.data_type = keras.
+        # else:
+        #     raise RuntimeError("Not a supported data type. Please pass float32 or float64")
+
+    def get_model(self):
+        keras.backend.dtype('float64')
+        model = Sequential()
+        # This layer outputs 14x10, 14x100, 14x1000, etc...
+        model.add(Dense(self.params_per_layer,
+                                        input_shape=(13,),
+                                        kernel_initializer='normal',
+                                        activation='relu'))
+        for i in range(self.hidden_layers_num):
+            model.add(Dense(self.params_per_layer,
+                                            input_shape=(self.params_per_layer,),
+                                            kernel_initializer='normal',
+                                            activation='relu'))
+        model.add(Dense(1,kernel_initializer='normal'))
+        # We set a very
+        optimizer = keras.optimizers.Adam(learning_rate=self.learning_rate)
+        model.compile(loss='mean_squared_error', optimizer=optimizer)
+        return model
 
 def get_hyperparams():
     local_params = {
@@ -43,7 +80,7 @@ def get_model_config(folder_configs, dataset, is_agg=False, party_id=0):
     K.clear_session()
     # Generate model spec:
     spec = {
-        'model_name': 'keras-cnn',
+        'model_name': 'keras-fc',
         'model_definition': fname
     }
 
@@ -56,41 +93,3 @@ def get_model_config(folder_configs, dataset, is_agg=False, party_id=0):
     return model
 
 
-
-class HousingMLP:
-    def __init__(self, params_per_layer=10, hidden_layers_num=1, learning_rate=0.0, data_type="float32"):
-        super(HousingMLP, self).__init__()
-        self.params_per_layer = params_per_layer
-        self.hidden_layers_num = hidden_layers_num
-        # We set the default value to 0.0 so not to train,
-        # since this model is solely used for stress testing.
-        self.learning_rate = learning_rate
-
-        if data_type == "float32":
-            self.data_type = tf.float32
-        elif data_type == "float64":
-            self.data_type = tf.float64
-        else:
-            raise RuntimeError("Not a supported data type. Please pass float32 or float64")
-
-    def get_model(self):
-        model = tf.keras.models.Sequential()
-        # This layer outputs 14x10, 14x100, 14x1000, etc...
-        model.add(tf.keras.layers.Dense(self.params_per_layer,
-                                        input_shape=(13,),
-                                        kernel_initializer='normal',
-                                        activation='relu',
-                                        dtype=self.data_type))
-        for i in range(self.hidden_layers_num):
-            model.add(tf.keras.layers.Dense(self.params_per_layer,
-                                            input_shape=(self.params_per_layer,),
-                                            kernel_initializer='normal',
-                                            activation='relu',
-                                            dtype=self.data_type))
-        model.add(tf.keras.layers.Dense(1,
-                                        kernel_initializer='normal',
-                                        dtype=self.data_type))
-        # We set a very
-        optimizer = tf.keras.optimizers.Adam(learning_rate=self.learning_rate)
-        model.compile(loss='mean_squared_error', optimizer=optimizer)
-        return model
