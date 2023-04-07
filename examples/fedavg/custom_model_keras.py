@@ -29,7 +29,7 @@ class HousingMLP:
         #     raise RuntimeError("Not a supported data type. Please pass float32 or float64")
 
     def get_model(self):
-        keras.backend.dtype('float64')
+        k.backend.set_floatx('float64')
         model = Sequential()
         # This layer outputs 14x10, 14x100, 14x1000, etc...
         model.add(Dense(self.params_per_layer,
