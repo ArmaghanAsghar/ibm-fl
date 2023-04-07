@@ -314,7 +314,7 @@ def save_housing_data(points_per_party, folder_party_data, folder_dataset):
     """ Load training and test data. """
     required_training_samples = int(learners_num * train_samples_per_learner)
     total_required_samples = required_training_samples + int(test_samples)
-    housing_np = pd.read_csv("/Users/armaghan/Documents/IBM_Discovery/federated-learning-lib/examples/housing_mlp/housing_data.csv").to_numpy()
+    housing_np = pd.read_csv(os.getcwd() + "/examples/housing_mlp/housing_data.csv").to_numpy()
     housing_np = housing_np[~np.isnan(housing_np).any(axis=1)]
 
     total_rows = len(housing_np)
