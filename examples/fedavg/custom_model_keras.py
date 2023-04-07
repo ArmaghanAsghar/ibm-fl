@@ -43,7 +43,7 @@ class HousingMLP:
                                             activation='relu'))
         model.add(Dense(1,kernel_initializer='normal'))
         # We set a very
-        optimizer = keras.optimizers.Adam(learning_rate=self.learning_rate)
+        optimizer = keras.optimizers.Adam(lr=self.learning_rate)
         model.compile(loss='mean_squared_error', optimizer=optimizer)
         return model
 
